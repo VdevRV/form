@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<style>
+
+
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=RocknRoll+One&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital@1&family=RocknRoll+One&display=swap');
+
+h2{
+font-family: 'RocknRoll One', sans-serif;
+color:#fec107;
+}
+
+table{
+
+margin-top:10px
+}
+
+table, th, td {
+  border: 1px solid black;
+  text-align:justify;
+  font-family: 'Josefin Sans', sans-serif;
+font-family: 'RocknRoll One', sans-serif;
+font-size:20px;
+  
+}
+th{
+height:80px;
+text-align:center;
+}
+td{
+height:60px;
+font-size:10px;
+text-align:center;
+padding-top:0px
+
+}
+
+button{
+
+background: #fec107;
+color:white;
+height:40px;
+width:160px;
+font-family: 'Josefin Sans', sans-serif;
+font-family: 'RocknRoll One', sans-serif;
+font-size:11px
+}
+
+button:hover{
+background:#8fbc8f;
+
+}
+
+.employeetable{
+  background: white;
+  padding-left:10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  padding-top: 20px;
+  margin-top: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+body{
+    background: #fec107;
+    padding: 0 10px;
+}
+
+
+
+div{
+    padding: 13px 0 10px 0;
+}
+
+#wrapper{
+  display:"none";
+}
+
+
+.wrapper{
+
+    
+    max-width: 500px;
+    height: 600px;
+    width:100%;
+    background: #fff;
+    margin:20px auto;
+    padding: 30px;
+    box-shadow: 1px 1px 2px rgba(0,0,0,0.125);
+}
+
+.wrapper .title{
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 25px;
+    color: #fec107;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.wrapper .form{
+
+    width:100%;
+
+}
+
+.wrapper .form .inputfield{
+
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+.wrapper .form .input_field label{
+    width:200px;
+    color: #757575;
+    margin-right: 10px;
+    font-size: 14px;
+}
+.wrapper .form .input_field ::placeholder{
+    width:200px;
+    margin-right: 10px;
+    font-size: 14px;
+}
+
+.wrapper .form .input_field .input{
+
+    width: 100%;
+    outline: none;
+    border: 1px solid #d5dbd9;
+    font-size: 15px;
+    padding: 8px 10px;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+
+}
+
+.wrapper .form .input_field .textarea{
+    resize:none;
+    height: 125px;
+    /* width:  440px; */
+    width: 100%;
+    border: 1px solid #d5dbd9;
+    padding: 8px 10px;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+
+}
+.wrapper .form .input_field .custom_select select{
+    appearance: none;
+    border:1px solid #d5dbd9;
+    width: 100%;
+    height: 100%;
+    padding: 8px 10px;
+    border-radius: 3px;
+    outline: none;
+}
+
+.wrapper .form .input_field .check input[type="checkbox"]{
+    position: absolute;
+    top: 0;
+    left:0;
+    opacity: 0;
+}
+
+.wrapper .form .input_field .check .checkmark{
+    width: 15px;
+    height: 15px;
+    border: 1px solid #fec107;
+    position: relative;
+}
+
+.wrapper .form .input_field .btn{
+    width: 100%;
+    padding: 8px 10px;
+    font-size: 15px;
+    border:0;
+    background: #fec107;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 3px;
+    outline:none;
+} 
+.wrapper .form .input_field .btn:hover{
+    width: 100%;
+    padding: 8px 10px;
+    font-size: 15px;
+    border:0;
+    background: #8fbc8f;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 3px;
+    outline:none;
+} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+body{
+    background: #fec107;
+    padding: 0 10px;
+}
+
+</style>
+
+
+<head>
+
+    <meta charset="UFT-8">
+    <title>REGISTRATION FORM</title>
+
+  
+
+</head>
+
+<body>
+
+<div class="employeetable" id="employeetable">
+
+    <h2>Employee Table</h2>
+
+
+    <!-- <button type="button" onclick="myFunction()" >ADD EMPLOYEE</button> -->
+    <button onclick="addemployee()">ADD EMPLOYEE</button>
+    
+    <table id="table" style="width:100%">
+      <tr>
+        <th>Emp id</th>
+        <th>Firstname</th>
+        <th>Lastname</th>
+         <th>E-mail</th>
+         <th>Phno</th>
+         <th>Postal code</th>
+         <th>Gender</th>
+         
+      </tr>
+      <!-- <tr>
+          <td id="empfname 1"></td>
+          <td id="emplname 1"></td>
+          <td id="empemail 1"></td>
+          <td id="empphno 1" ></td>
+            <td id="emppin 1" ></td>
+      </tr>
+      <tr>
+          <td id="empfname 2"></td>
+          <td id="emplname 2"></td>
+          <td id="empemail 2"></td>
+          <td id="empphno 2" ></td>
+          <td id="emppin 2" ></td>
+      </tr>
+      <tr>
+          <td id="empfname 3"></td>
+          <td id="emplname 3"></td>
+          <td id="empemail 3"></td>
+          <td id="empphno 3" ></td>
+            <td id="emppin 3" ></td>
+      </tr>
+      <tr>
+          <td id="empfname 4"></td>
+          <td id="emplname 4"></td>
+          <td id="empemail 4"></td>
+          <td id="empphno 4" ></td>
+            <td id="emppin 4" ></td>
+      </tr>
+      <tr>
+          <td id="empfname 5"></td>
+          <td id="emplname 5"></td>
+          <td id="empemail 5"></td>
+          <td id="empphno 5" ></td>
+            <td id="emppin 5" ></td>
+      </tr> -->
+      
+      
+      
+      
+      
+      
+    
+    </table>
+
+    
+
+
+
+
+<!-- ///////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+
+
+
+</div>
+
+
+<div id="wrapper" class="wrapper" style="display:none">
+    
+    <div class="title">
+
+        REGISTRATION FORM
+
+    </div>
+
+    <div class="form">
+        <div class="input_field">
+            <!-- <label>First Name :</label> -->
+            <input type="text" placeholder="Employee ID" class="input" id="empid">
+        </div>
+
+
+        <div class="input_field">
+            <!-- <label>First Name :</label> -->
+            <input type="text" placeholder="First name" class="input" id="fname">
+        </div>
+
+        <div class="input_field">
+            <!-- <label>Last Name :</label> -->
+            <input type="text"   placeholder="Last name" class="input" id="lname">
+        </div>
+
+        <div class="input_field">
+        <div class="custom_select" id="gender">
+            <select>
+                <option value=" ">Select Gender</option>
+                <option value=" ">Male</option>
+                <option value=" ">Female</option>
+            </select>
+        </div>
+        </div>
+
+        <div class="input_field">
+            <!-- <label>E-mail id :</label> -->
+            <input type="text"  placeholder="E-mail"class="input" id="email">
+        </div>
+
+        <div class="input_field">
+            <!-- <label>Phone number :</label> -->
+            <input type="text"  placeholder="phonenumber" class="input" id="phonenumber" >
+        </div>
+
+        <!-- <div class="input_field">
+            <textarea class="textarea"  placeholder="Address" id="address"></textarea>
+        </div> -->
+
+        <div class="input_field">
+            <input type="text"  placeholder="Postal code"class="input" id="pincode" >
+        </div>
+
+   
+        <div class="input_field">
+            <input type="submit" value=Register  onclick="employeedetails()" class="btn">
+            <div id="para"></div>
+        </div>
+    </div>
+
+    </div>
+
+
+
+
+
+
+
+
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+
+
+</body>
+
+
+
+<script>
+
+
+var empid,fname,lname,email,phonenumber,pincode,gender;
+var array=[];
+var success="yes";
+
+
+
+
+
+function myFunction() {
+  var x = document.getElementById("wrapper");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+
+function hideemployee() {
+  var x = document.getElementById("employeetable");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+
+function addemployee() {
+
+  hideemployee();
+  myFunction();
+}
+
+
+
+
+function employeedetails(){
+  empid=document.getElementById("empid").value;
+   fname=document.getElementById("fname").value;
+   lname=document.getElementById("lname").value;
+   email=document.getElementById("email").value;
+   phonenumber=document.getElementById("phonenumber").value;
+   pincode=document.getElementById("pincode").value;
+   gender=document.getElementById("gender").value;
+
+  for(i=0;i<array.length;i++)
+  {
+    if(empid==array[i])
+    {
+      alert("employee id "+array[i]+"already taken");
+      success="No"
+      hideemployee();
+      myFunction();
+    }
+    else{
+      success="yes";
+    }
+  }
+
+  if(success=="yes")
+  {
+    array.push(empid);
+ 
+   
+
+  //alert("fname :"+fname+"\n"+"lname :"+lname+"\nemail :"+email+"\nphone number :"+phonenumber+"pincode :"+pincode);
+
+  table = document.getElementById("table");
+  var newRow = table.insertRow(1);
+  c1 = newRow.insertCell(0),
+  c2 = newRow.insertCell(1),
+  c3 = newRow.insertCell(2),
+  c4 = newRow.insertCell(3),
+  c5 = newRow.insertCell(4),
+  c6 = newRow.insertCell(5),
+  c7 = newRow.insertCell(6)
+  
+  c1.innerHTML = empid;
+  c2.innerHTML = fname;
+  c3.innerHTML = lname;
+  c4.innerHTML = email;
+  c5.innerHTML = phonenumber;
+  c6.innerHTML=pincode;
+  c7.innerHTML=gender
+
+  hideemployee();
+  myFunction();
+  }
+
+
+
+}
+
+</script>
+
+
+
+</html>
