@@ -34,7 +34,7 @@ height:80px;
 text-align:center;
 }
 td{
-height:60px;
+height:37px;
 font-size:10px;
 text-align:center;
 padding-top:0px
@@ -46,7 +46,7 @@ button{
 background: #fec107;
 color:white;
 height:40px;
-width:160px;
+width:137px;
 font-family: 'Josefin Sans', sans-serif;
 font-family: 'RocknRoll One', sans-serif;
 font-size:11px
@@ -110,10 +110,10 @@ div{
 
     
     max-width: 500px;
-    height: 600px;
+    height: 820px;
     width:100%;
     background: #fff;
-    margin:20px auto;
+    margin:10px auto;
     padding: 30px;
     box-shadow: 1px 1px 2px rgba(0,0,0,0.125);
 }
@@ -199,6 +199,7 @@ div{
 }
 
 .wrapper .form .input_field .btn{
+    height: 37px;
     width: 100%;
     padding: 8px 10px;
     font-size: 15px;
@@ -210,6 +211,32 @@ div{
     outline:none;
 } 
 .wrapper .form .input_field .btn:hover{
+  height: 37px;
+    width: 100%;
+    padding: 8px 10px;
+    font-size: 15px;
+    border:0;
+    background: #8fbc8f;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 3px;
+    outline:none;
+} 
+
+.wrapper .form .input_field .save{
+  height: 37px;
+    width: 100%;
+    padding: 8px 10px;
+    font-size: 15px;
+    border:0;
+    background: #fec107;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 3px;
+    outline:none;
+} 
+.wrapper .form .input_field .save:hover{
+  height: 37px;
     width: 100%;
     padding: 8px 10px;
     font-size: 15px;
@@ -242,6 +269,92 @@ body{
     background: #fec107;
     padding: 0 10px;
 }
+
+
+/* -------------------FORM TAG------------------------------ */
+
+#firstname1{
+padding-top: 1px;
+padding-left: 10px;
+font-size: 10px;
+color: firebrick;
+}
+#empid1{
+  padding-top: 1px;
+  padding-left: 10px;
+  font-size: 10px;
+  color: firebrick;
+
+}
+#lastname1{
+padding-top: 1px;
+padding-left: 10px;
+font-size: 10px;
+color: firebrick;
+}
+
+#email1{
+padding-top: 1px;
+padding-left: 10px;
+font-size: 10px;
+color: firebrick;
+}
+
+#phonenumber1{
+padding-top: 1px;
+padding-left: 10px;
+font-size: 10px;
+color: firebrick;
+}
+#pincode1{
+padding-top: 1px;
+padding-left: 10px;
+font-size: 10px;
+color: firebrick;
+}
+#gender1{
+padding-top: 1px;
+padding-left: 10px;
+font-size: 10px;
+color: firebrick;
+}
+
+
+
+#empid:focus{
+
+border-color:#fec107 ;
+box-shadow: 0 0 8px 0 #fec107;
+
+}
+
+#fname:focus{
+  border-color:#fec107 ;
+  box-shadow: 0 0 8px 0 #fec107; 
+}
+
+#lname:focus{
+  border-color:#fec107 ;
+  box-shadow: 0 0 8px 0 #fec107; 
+}
+
+#email:focus{
+  border-color:#fec107 ;
+  box-shadow: 0 0 8px 0 #fec107; 
+}
+
+#phonenumber:focus{
+  border-color:#fec107 ;
+  box-shadow: 0 0 8px 0 #fec107; 
+}
+#pincode:focus{
+  border-color:#fec107 ;
+  box-shadow: 0 0 8px 0 #fec107; 
+}
+
+
+
+
 
 </style>
 
@@ -345,39 +458,47 @@ body{
     <div class="form">
         <div class="input_field">
             <!-- <label>First Name :</label> -->
-            <input type="text" placeholder="Employee ID" class="input" id="empid">
+            <input type="text" placeholder="Employee ID" class="input" id="empid" aria-describedby="employee-id">
+            <div id="empid1"><p><small></small></p></div>
         </div>
+        
 
 
         <div class="input_field">
             <!-- <label>First Name :</label> -->
-            <input type="text" placeholder="First name" class="input" id="fname">
+            <input type="text" placeholder="First name" class="input" id="fname" autocomplete="off" aria-describedby="employee-id">
+            <div id="firstname1"><p><small></small></p></div>
         </div>
 
         <div class="input_field">
             <!-- <label>Last Name :</label> -->
-            <input type="text"   placeholder="Last name" class="input" id="lname">
-        </div>
+            <input type="text"   placeholder="Last name" class="input" id="lname" autocomplete="off" aria-describedby="employee-id" >
+            <div id="lastname1"><p><small></small></p></div>
+          </div>
 
         <div class="input_field">
-        <div class="custom_select" id="gender">
-            <select>
-                <option value=" ">Select Gender</option>
-                <option value=" ">Male</option>
-                <option value=" ">Female</option>
+        <div class="custom_select" >
+            <select id="gender">
+                <option value="select">Select Gender</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
             </select>
+            <div id="gender1"><p><small></small></p></div>
         </div>
         </div>
 
         <div class="input_field">
             <!-- <label>E-mail id :</label> -->
-            <input type="text"  placeholder="E-mail"class="input" id="email">
+            <input type="text"  placeholder=" example@gmail.com"class="input" id="email">
+            <div id="email1"><p><small></small></p></div>
         </div>
 
         <div class="input_field">
             <!-- <label>Phone number :</label> -->
             <input type="text"  placeholder="phonenumber" class="input" id="phonenumber" >
-        </div>
+            <div id="phonenumber1"><p><small></small></p></div>
+          </div>
+
 
         <!-- <div class="input_field">
             <textarea class="textarea"  placeholder="Address" id="address"></textarea>
@@ -385,6 +506,11 @@ body{
 
         <div class="input_field">
             <input type="text"  placeholder="Postal code"class="input" id="pincode" >
+            <div id="pincode1"><p><small></small></p></div>
+        </div>
+
+        <div class="input_field">
+          <button class="save" onclick="save()">SAVE</button>
         </div>
 
    
@@ -448,6 +574,109 @@ function addemployee() {
 }
 
 
+function save()
+{
+    
+   empid=document.getElementById("empid").value;
+   fname=document.getElementById("fname").value;
+   lname=document.getElementById("lname").value;
+   email=document.getElementById("email").value;
+   phonenumber=document.getElementById("phonenumber").value;
+   pincode=document.getElementById("pincode").value;
+   gender=document.getElementById("gender").value;
+
+
+  if(empid=="")
+  {
+    document.getElementById("empid1").innerHTML ="* Enter an employee-id";
+  }
+  else{
+    document.getElementById("empid1").innerHTML ="";
+  }
+
+  if(fname=="")
+  {
+    document.getElementById("firstname1").innerHTML ="* Enter first name";
+  }
+
+  else{
+
+    document.getElementById("firstname1").innerHTML =" ";
+  }
+  
+
+
+
+
+  if(lname=="")
+  {
+    document.getElementById("lastname1").innerHTML ="* Enter last name";
+  }
+  else{
+    document.getElementById("lastname1").innerHTML =" ";
+  }
+
+  if(email=="")
+  {
+    document.getElementById("email1").innerHTML ="* Enter your email id";
+  }
+  else{
+
+    var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+    
+            if (reg.test(email) == false) 
+            {
+              document.getElementById("email1").innerHTML ="* Invalid email-id";
+            }
+
+
+  }
+
+
+  if(phonenumber=="")
+  {
+    document.getElementById("phonenumber1").innerHTML ="* Enter phonenumber";
+  }
+  else{
+
+          if(phonenumber.length!=10)
+          {
+            document.getElementById("phonenumber1").innerHTML ="* Not 10 digits";
+          }
+      
+        var phoneNum = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/; 
+            if(phonenumber.value.match(phoneNum)) {
+              document.getElementById("phonenumber1").innerHTML =" ";
+            }
+            else{
+              document.getElementById("phonenumber1").innerHTML ="* invalid Phone number";
+            }
+
+  }
+
+  if(pincode=="")
+  {
+    document.getElementById("pincode1").innerHTML ="* Enter PIN CODE";
+  }
+  else{
+
+    document.getElementById("pincode1").innerHTML =" ";
+  }
+
+  if(gender=="select")
+  {
+    document.getElementById("gender1").innerHTML ="* please select gender";
+  }
+  else{
+    document.getElementById("gender1").innerHTML =" ";
+  }
+
+
+
+
+
+}
+
 
 
 function employeedetails(){
@@ -458,6 +687,16 @@ function employeedetails(){
    phonenumber=document.getElementById("phonenumber").value;
    pincode=document.getElementById("pincode").value;
    gender=document.getElementById("gender").value;
+  
+
+
+  // if(empid==" ")
+  // {
+  //   document.getElementById("empid1").innerHTML = "Enter an employee-id";
+  // }
+
+
+
 
   for(i=0;i<array.length;i++)
   {
@@ -467,6 +706,7 @@ function employeedetails(){
       success="No"
       hideemployee();
       myFunction();
+      break;
     }
     else{
       success="yes";
